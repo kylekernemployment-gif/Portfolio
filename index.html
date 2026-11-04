@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyle Kern — Social Media & Community Strategist</title>
+  <meta name="description" content="Kyle Kern: social media and community strategist for sports and digital media. 200M+ views across X, Instagram, Facebook, YouTube, TikTok and Discord.">
+  <meta property="og:title" content="Kyle Kern — Social Media & Community Strategist">
+  <meta property="og:description" content="200M+ cross-platform views for sports and digital media brands. Content strategy, viral production, community growth.">
+  <meta property="og:image" content="assets/ig-opening-week.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f5f7fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #55607a;
+      --line: #e3e8f1;
+      --accent: #1d4ed8;
+      --accent-soft: #e8efff;
+      --shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 8px 24px rgba(15, 23, 42, .06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1020;
+        --bg-alt: #0f1629;
+        --card: #131b31;
+        --text: #e8edf7;
+        --muted: #9aa6bf;
+        --line: #232d47;
+        --accent: #6c9bff;
+        --accent-soft: #18254a;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    body { overflow-x: hidden; }
+    .wrap > *, .grid > *, .stats > *, .accounts > *, .results > *, .job > * { min-width: 0; }
+    .eyebrow, h1, h2, p { overflow-wrap: anywhere; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 80px 0; }
+    section.alt { background: var(--bg-alt); }
+    .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+    h2 { font-size: clamp(28px, 4vw, 38px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 14px; }
+    .lead { color: var(--muted); max-width: 640px; margin: 0 0 40px; font-size: 17px; }
+
+    /* nav */
+    header.nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    header.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; letter-spacing: -.02em; color: var(--text); font-size: 18px; }
+    .logo span { color: var(--accent); }
+    nav a { color: var(--muted); font-weight: 500; font-size: 15px; margin-left: 26px; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+    @media (max-width: 720px) { nav a:not(.nav-cta) { display: none; } }
+    .nav-cta { color: var(--accent) !important; font-weight: 600 !important; }
+
+    /* hero */
+    .hero { padding: 88px 0 72px; }
+    .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+    @media (max-width: 860px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .hero-photo { order: -1; } }
+    .hero h1 { font-size: clamp(40px, 6.5vw, 64px); line-height: 1.02; letter-spacing: -.035em; margin: 0 0 16px; font-weight: 800; }
+    .hero .role { font-size: clamp(18px, 2.4vw, 22px); font-weight: 600; margin: 0 0 18px; }
+    .hero .role span { color: var(--accent); }
+    .hero p.summary { color: var(--muted); font-size: 17px; max-width: 560px; margin: 0 0 30px; }
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: 15px;
+      border: 1px solid var(--line); color: var(--text); background: var(--card); }
+    .btn:hover { text-decoration: none; border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn.primary:hover { filter: brightness(1.08); }
+    .btn svg { width: 18px; height: 18px; }
+    .hero-photo { justify-self: center; }
+    .avatar { width: min(320px, 70vw); aspect-ratio: 1; border-radius: 28px; background: linear-gradient(140deg, var(--accent), #0b1f5c);
+      display: grid; place-items: center; color: #fff; font-size: 96px; font-weight: 800; letter-spacing: -.04em; box-shadow: var(--shadow); overflow: hidden; }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .location { margin-top: 14px; text-align: center; color: var(--muted); font-size: 14px; }
+
+    /* stats */
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    @media (max-width: 860px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .stat { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); }
+    .stat b { display: block; font-size: clamp(30px, 4vw, 40px); letter-spacing: -.03em; line-height: 1.1; }
+    .stat span { color: var(--muted); font-size: 14.5px; }
+
+    /* accounts */
+    .accounts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
+    @media (max-width: 960px) { .accounts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .acct { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: var(--card); }
+    .acct .plat { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .acct b { display: block; font-size: 24px; margin: 4px 0 2px; letter-spacing: -.02em; }
+    .acct small { color: var(--muted); font-size: 13.5px; }
+
+    /* work */
+    .tabs-title { font-size: 20px; margin: 0 0 18px; display: flex; align-items: baseline; gap: 10px; }
+    .tabs-title small { color: var(--muted); font-weight: 500; font-size: 14px; }
+    .grid { display: grid; gap: 18px; }
+    .grid.ig { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid.x { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+    @media (max-width: 960px) { .grid.ig { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid.x { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .grid.x { grid-template-columns: minmax(0, 1fr); } }
+    .post { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow);
+      transition: transform .15s ease; }
+    .post:hover { transform: translateY(-3px); }
+    .post a { display: block; color: inherit; }
+    .post a:hover { text-decoration: none; }
+    .post img { width: 100%; height: auto; background: var(--bg-alt); }
+    .post .cap { padding: 12px 14px 14px; }
+    .post .cap strong { display: block; font-size: 14.5px; line-height: 1.3; }
+    .post .cap span { color: var(--muted); font-size: 13px; }
+    .post .cap .metric { color: var(--accent); font-weight: 700; }
+    .x-white { background: #fff; }
+
+    /* results */
+    .results { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+    @media (max-width: 860px) { .results { grid-template-columns: minmax(0, 1fr); } }
+    .result { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; box-shadow: var(--shadow); }
+    .result h3 { margin: 0 0 4px; font-size: 19px; }
+    .result p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+    .result img { border-radius: 10px; border: 1px solid var(--line); max-height: 560px; margin: 0 auto; }
+    .kpis { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .kpi { background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13.5px; padding: 6px 10px; border-radius: 999px; }
+
+    /* experience */
+    .timeline { display: grid; gap: 18px; }
+    .job { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 28px; padding: 26px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+    @media (max-width: 760px) { .job { grid-template-columns: 1fr; gap: 8px; } }
+    .job .when { color: var(--muted); font-size: 14px; font-weight: 600; }
+    .job .when .badge { display: inline-block; margin-top: 8px; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 700; padding: 4px 9px; border-radius: 999px; }
+    .job h3 { margin: 0; font-size: 19px; }
+    .job .org { color: var(--accent); font-weight: 600; margin: 2px 0 10px; }
+    .job ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .job li { margin: 4px 0; }
+    .job li b { color: var(--text); font-weight: 600; }
+
+    /* skills / education */
+    .two { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 40px; }
+    @media (max-width: 860px) { .two { grid-template-columns: minmax(0, 1fr); } }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { border: 1px solid var(--line); background: var(--card); padding: 8px 14px; border-radius: 999px; font-size: 14.5px; font-weight: 500; }
+    .chip.tool { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 600; }
+    h3.sub { font-size: 15px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 26px 0 12px; }
+    .edu { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+    .edu b { display: block; }
+    .edu span { color: var(--muted); font-size: 14.5px; }
+
+    /* contact */
+    .contact { text-align: center; }
+    .contact .lead { margin-left: auto; margin-right: auto; }
+    .contact .btns { justify-content: center; }
+    footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Kyle Kern<span>.</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#results">Results</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Social Media · Community · Content Production</p>
+        <h1>Kyle Kern</h1>
+        <p class="role">Social Media &amp; Community Strategist for <span>sports and digital media</span></p>
+        <p class="summary">I grow audiences with data-driven content strategy, viral content production, and community programming. Over <strong>200M+ cross-platform views</strong> generated for NBA media in under six months.</p>
+        <div class="btns">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn" href="Kyle-Kern-Resume.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download résumé
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/kyle-kern-2526413a9" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.6 4.77 6v5.56h-4v-4.93c0-1.18-.02-2.69-1.64-2.69-1.64 0-1.9 1.28-1.9 2.6v5.02h-4z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- Replace the initials with a photo: <img src="assets/kyle.jpg" alt="Kyle Kern"> -->
+        <div class="avatar" aria-label="Kyle Kern">KK</div>
+        <div class="location">📍 Toms River, New Jersey</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="alt" id="impact">
+    <div class="wrap">
+      <p class="eyebrow">Impact</p>
+      <h2>Results that show up in the numbers</h2>
+      <p class="lead">Director of Social Content &amp; Community at Players Choice, an NBA media brand, where I run content and community across every major platform.</p>
+      <div class="stats">
+        <div class="stat"><b>200M+</b><span>cross-platform views in under six months</span></div>
+        <div class="stat"><b>25+</b><span>posts over 1M impressions, several reaching 4M</span></div>
+        <div class="stat"><b>535%</b><span>growth in X impressions</span></div>
+        <div class="stat"><b>477%</b><span>growth in Facebook views</span></div>
+      </div>
+      <div class="accounts">
+        <div class="acct"><div class="plat">YouTube</div><b>150K+</b><small>subscribers · 2K+ paid members</small></div>
+        <div class="acct"><div class="plat">TikTok</div><b>340K</b><small>followers</small></div>
+        <div class="acct"><div class="plat">IG · FB · Threads</div><b>~75K</b><small>combined followers</small></div>
+        <div class="acct"><div class="plat">X</div><b>15K</b><small>followers</small></div>
+        <div class="acct"><div class="plat">Discord</div><b>2,400</b><small>community members</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work">
+    <div class="wrap">
+      <p class="eyebrow">Selected work</p>
+      <h2>Content I've produced</h2>
+      <p class="lead">Recurring series, debate posts and show promos I produced for Players Choice. Click any post to view it full size.</p>
+
+      <h3 class="tabs-title">Instagram <small>@playerschoiceshow</small></h3>
+      <div class="grid ig">
+        <div class="post"><a href="assets/ig-opening-week.jpg" target="_blank"><img src="assets/ig-opening-week.jpg" alt="Nightmare Opening Week carousel" loading="lazy"></a>
+          <div class="cap"><strong>Nightmare Opening Week</strong><span><span class="metric">1.2M views</span> · 5.5K likes · 3.2K shares</span></div></div>
+        <div class="post"><a href="assets/ig-who-wins-series.jpg" target="_blank"><img src="assets/ig-who-wins-series.jpg" alt="Who Wins the Series: 2026 Sixers vs 2017 Warriors" loading="lazy"></a>
+          <div class="cap"><strong>Who Wins the Series?</strong><span><span class="metric">829K views</span> · 2K likes · 470 comments</span></div></div>
+        <div class="post"><a href="assets/ig-build-around-flagg.jpg" target="_blank"><img src="assets/ig-build-around-flagg.jpg" alt="Build your team around Cooper Flagg with a $12 budget" loading="lazy"></a>
+          <div class="cap"><strong>Build Your Team: $12 Budget</strong><span><span class="metric">269K views</span> · interactive series</span></div></div>
+        <div class="post"><a href="assets/ig-keep3-cut3.jpg" target="_blank"><img src="assets/ig-keep3-cut3.jpg" alt="Keep 3, Cut 3: wing defenders" loading="lazy"></a>
+          <div class="cap"><strong>Keep 3, Cut 3: Wing Defenders</strong><span><span class="metric">215K views</span> · 6.4K likes · 11.5K shares</span></div></div>
+        <div class="post"><a href="assets/ig-footballer-hair.jpg" target="_blank"><img src="assets/ig-footballer-hair.jpg" alt="NBA Stars x Footballer Hair" loading="lazy"></a>
+          <div class="cap"><strong>NBA Stars × Footballer Hair</strong><span><span class="metric">52.9K views</span> · crossover culture post</span></div></div>
+        <div class="post"><a href="assets/ig-hot-take.jpg" target="_blank"><img src="assets/ig-hot-take.jpg" alt="The Panel Hot Take graphic" loading="lazy"></a>
+          <div class="cap"><strong>The Panel: Hot Take</strong><span>Show branding · quote series</span></div></div>
+        <div class="post"><a href="assets/ig-mock-trade.jpg" target="_blank"><img src="assets/ig-mock-trade.jpg" alt="Mock Trade graphic" loading="lazy"></a>
+          <div class="cap"><strong>Mock Trade</strong><span>Recurring discussion format</span></div></div>
+        <div class="post"><a href="assets/ig-panel-awards.jpg" target="_blank"><img src="assets/ig-panel-awards.jpg" alt="The Panel Chat Awards finalists" loading="lazy"></a>
+          <div class="cap"><strong>The Panel Chat Awards</strong><span>Community event promo</span></div></div>
+      </div>
+
+      <h3 class="tabs-title" style="margin-top:56px">X (Twitter) <small>@PlayersChoice_ · viral posts</small></h3>
+      <div class="grid x">
+        <div class="post x-white"><a href="assets/x-new-additions.jpg" target="_blank"><img src="assets/x-new-additions.jpg" alt="Best player with these new additions" loading="lazy"></a>
+          <div class="cap"><strong>"Best player with these new additions?"</strong><span><span class="metric">3.9M views</span> · 4.9K likes</span></div></div>
+        <div class="post x-white"><a href="assets/x-wing-duos.jpg" target="_blank"><img src="assets/x-wing-duos.jpg" alt="Which wing duo is better defensively" loading="lazy"></a>
+          <div class="cap"><strong>Wing duo debates</strong><span><span class="metric">2.6M + 739K views</span></span></div></div>
+        <div class="post x-white"><a href="assets/x-mccollum.jpg" target="_blank"><img src="assets/x-mccollum.jpg" alt="CJ McCollum meme" loading="lazy"></a>
+          <div class="cap"><strong>CJ McCollum vs. Brunson</strong><span><span class="metric">1.5M views</span> · 56K likes · 6.4K reposts</span></div></div>
+        <div class="post x-white"><a href="assets/x-name-that-player.jpg" target="_blank"><img src="assets/x-name-that-player.jpg" alt="Name that player: stats vs eye test" loading="lazy"></a>
+          <div class="cap"><strong>"Name that player"</strong><span><span class="metric">1.3M views</span></span></div></div>
+        <div class="post x-white"><a href="assets/x-sengun.jpg" target="_blank"><img src="assets/x-sengun.jpg" alt="Alperen Sengun tonight" loading="lazy"></a>
+          <div class="cap"><strong>"Alperen Sengun tonight"</strong><span><span class="metric">1M views</span> · 44K likes</span></div></div>
+        <div class="post x-white"><a href="assets/x-2k-ratings.jpg" target="_blank"><img src="assets/x-2k-ratings.jpg" alt="2K ratings comparison" loading="lazy"></a>
+          <div class="cap"><strong>2K ratings comparison</strong><span><span class="metric">680K views</span> · 19K likes</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="alt" id="results">
+    <div class="wrap">
+      <p class="eyebrow">Analytics</p>
+      <h2>Growth since taking over</h2>
+      <p class="lead">Platform analytics from April 1, when I was handed full responsibility for the accounts.</p>
+      <div class="results">
+        <div class="result">
+          <h3>Facebook</h3>
+          <p>Views, interactions and follows all up, led by the "Who Wins the Series?" format.</p>
+          <div class="kpis"><span class="kpi">30.6M views · ↑281%</span><span class="kpi">256K interactions · ↑49%</span><span class="kpi">6.5K new follows</span></div>
+          <img src="assets/analytics-facebook.jpg" alt="Facebook insights: views up 281%" loading="lazy">
+        </div>
+        <div class="result">
+          <h3>X (Twitter)</h3>
+          <p>Impressions, engagement and shares grew several times over.</p>
+          <div class="kpis"><span class="kpi">69.4M impressions · ↑467%</span><span class="kpi">808K engagements · ↑392%</span><span class="kpi">21.6K shares · ↑749%</span></div>
+          <img src="assets/analytics-x.jpg" alt="X account analytics: impressions up 467%" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+      <p class="lead">Sports media, gaming communities, digital marketing and sales.</p>
+      <div class="timeline">
+        <div class="job">
+          <div class="when">July 2026 – Present<br><span class="badge">Promoted after 3 months</span></div>
+          <div>
+            <h3>Director of Social Content &amp; Community</h3>
+            <div class="org">Players Choice · NBA Media</div>
+            <ul>
+              <li>Run social content, engagement and audience growth across <b>X, Facebook, Instagram, Threads, YouTube and Discord</b>, generating <b>200M+ views</b> in under six months.</li>
+              <li>Develop content strategy independently from performance data and trends.</li>
+              <li>Produced <b>25+ posts over 1M impressions</b> (several reaching 4M), averaging <b>500K daily impressions</b> over three months.</li>
+              <li>Analytics-driven strategy contributed to <b>535% growth in X impressions</b> and <b>477% growth in Facebook views</b>.</li>
+              <li>Built custom Discord bots, revitalized the community server, and organized NBA Playoff watch parties that helped drive YouTube Membership growth.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Aug 2025 – Dec 2025</div>
+          <div>
+            <h3>Field Marketing Representative</h3>
+            <div class="org">Keystone Roofing</div>
+            <ul>
+              <li>Directly contributed to <b>$200,000+ in closed sales</b> and <b>100+ qualified appointments</b> through consistent prospecting.</li>
+              <li>Generated high-quality leads through door-to-door outreach, client qualification and strategic callbacks.</li>
+              <li>Used persuasive communication and relationship-building to book free home-estimate appointments.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Oct 2024 – Mar 2025</div>
+          <div>
+            <h3>Community Management Associate</h3>
+            <div class="org">District 10 · Gaming</div>
+            <ul>
+              <li>Coordinated events and storylines with large content creators, producing short- and long-form content for cross-platform engagement.</li>
+              <li>Built and ran a community division: recruiting members, setting standards, moderating servers and resolving player reports.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job">
+          <div class="when">Aug 2023 – Jan 2024</div>
+          <div>
+            <h3>Digital Marketing &amp; Sales Intern</h3>
+            <div class="org">Vinio Marketing</div>
+            <ul>
+              <li>Designed digital content with Canva, CapCut and Adobe Creative Suite to keep Instagram and Facebook active alongside the founder.</li>
+              <li>Ran outbound sales outreach and cold calling to generate and qualify leads.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Education -->
+  <section class="alt" id="skills">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Skills</p>
+        <h2>What I bring</h2>
+        <div class="chips">
+          <span class="chip">Social Media Marketing</span><span class="chip">Content Strategy</span>
+          <span class="chip">Community Management</span><span class="chip">Content Creation</span>
+          <span class="chip">Marketing Analytics</span><span class="chip">Digital Marketing</span>
+          <span class="chip">Copywriting</span><span class="chip">Graphic Design</span>
+          <span class="chip">Video Editing</span><span class="chip">Lead Generation</span>
+          <span class="chip">Sales Outreach</span>
+        </div>
+        <h3 class="sub">Tools</h3>
+        <div class="chips">
+          <span class="chip tool">Adobe Creative Suite</span><span class="chip tool">Canva</span><span class="chip tool">CapCut</span>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Education</p>
+        <h2>Background</h2>
+        <div class="edu"><b>Associate of Business Administration</b><span>Ocean County College</span></div>
+        <div class="edu"><b>High School Diploma</b><span>Toms River High School South · Business Academy Graduate · Bloomberg Certification in Business</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's work together</h2>
+      <p class="lead">Open to social media, community and content roles, plus freelance work for sports and digital media brands.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:kylekernemployment@gmail.com">✉️ kylekernemployment@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/kyle-kern-2526413a9" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="Kyle-Kern-Resume.pdf" download>Download résumé</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Kyle Kern · Toms River, NJ</div>
+</footer>
+
+</body>
+</html>
